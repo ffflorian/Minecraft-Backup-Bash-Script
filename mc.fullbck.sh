@@ -178,7 +178,7 @@ case "$1" in
 		srv_check
 		if [ $ONLINE == 2 ]; then
 			kill_mc
-		if [ $ONLINE == 1 ]; then
+		elif [ $ONLINE == 1 ]; then
 			run_backup
 		fi
 		else
@@ -202,7 +202,7 @@ case "$1" in
 		srv_check
 		if [ $ONLINE == 2 ]; then
 			echo "Server is running"
- 		if [ $ONLINE == 1 ]; then
+ 		elif [ $ONLINE == 1 ]; then
 			echo "Server is not running"
 		fi
 	;;
